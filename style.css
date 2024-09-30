@@ -1,0 +1,142 @@
+*,
+*:before,
+*:after {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #0F62FE;
+}
+
+#head-text {
+    margin-top: 50px;
+    margin-left: 10px;
+    font-family: sans-serif;
+    color :#0F62FE;
+}
+
+.container {
+    width: 40%;
+    top: 30%;
+    left: 50%;
+    background :white;
+    border-radius: 1px;
+    min-width:450px;
+    position: absolute;
+    min-height:100px;
+    transform:translate(-50%,-50%);
+}
+
+#newtask{
+    position: relative;
+    padding: 30px 20px;
+}
+
+#newtask input {
+    width : 75%;
+    height: 45px;
+    padding: 12px;
+    color: #111111;
+    font-weight: sans-serif;
+    position: relative;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 15px;
+    border: 2px solid #33B1FF;
+}
+
+#newtask input:focus {
+    outline:none;
+    border-color: #0D75EC;
+}
+
+#newtask button {
+    position: relative;
+    float: right;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #0F62FE
+;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.tasks {
+    overflow-wrap: break-word;
+    /*overflow-y: auto;*/
+    max-height: 300px;
+    position: absolute;
+    border-radius: 0px;
+    width: 100%;
+    /*position: relative; */
+    background-color: #FFFFFF;
+    padding: 30px 20px;
+    margin-top: 0px;
+    justify-content: space-between;
+}
+
+
+
+.tasks::-webkit-scrollbar{
+    width: 10px
+}
+
+.tasks::-webkit-scrollbar-track{
+    background:#bae6ff;
+    border-radius: 25px;
+}
+
+.tasks::-webkit-scrollbar-thumb{
+    background:#0d75ec;
+    border-radius: 25px;
+ }
+
+ .checked {
+    text-decoration: line-through; /* Barrer le texte */
+    text-decoration-color:red; /* Changer la couleur du texte */
+}
+
+.task {
+    word-wrap: break-word; /* Le texte long passe à la ligne */
+    max-width: 100%; /* Empêche le débordement horizontal */
+    display: flex;
+    align-items: center; /* Aligne verticalement les éléments au centre */
+    justify-content: space-between; /* Place la case à cocher + texte à gauche et l'icône de suppression à droite */
+    margin-bottom: 10px; /* Espace entre les tâches */
+    padding: 5px; /* Un peu de padding pour aérer */
+    border: 1px solid #ccc; /* Optionnel, pour visualiser les limites de la tâche */
+}
+
+.task label {
+    display: flex; /* Permet d'aligner la case à cocher et le texte horizontalement */
+    align-items: center; /* Aligne verticalement la case à cocher et le texte */
+    flex-grow: 1; /* Permet à l'ensemble (case + texte) de prendre tout l'espace disponible */
+    margin-right: 10px; /* Espace entre le texte et l'icône de suppression */
+}
+
+.task input[type="checkbox"] {
+    margin-right: 10px; /* Espace entre la case à cocher et le texte */
+}
+
+.task p {
+    white-space: normal; /* Permet au texte de passer à la ligne si nécessaire */
+    word-break: break-word; /* Coupe les mots s'ils sont trop longs pour s'adapter à la largeur */
+    overflow-wrap: break-word; /* Assure que les longs mots ou URLs se cassent
+    margin: 0; /* Supprime les marges par défaut autour du paragraphe */
+    word-wrap: break-word; /* Le texte passe à la ligne si nécessaire */
+}
+
+.task .delete {
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+    margin-left: 10px; /* Espace entre le texte et l'icône */
+}
+
